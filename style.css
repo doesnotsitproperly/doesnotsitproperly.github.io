@@ -17,3 +17,7 @@ footer {
     font-size: 80%;
     line-height: 1;
 }
+
+.right-align {
+    text-align: right;
+}

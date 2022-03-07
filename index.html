@@ -7,12 +7,20 @@
         <link href="icon.png" rel="shortcut icon">
         <title>DoesNotSitProperly</title>
     </head>
-    <body onload="onLoad">
+    <body>
         <script src="format.js"></script>
         <h1>DoesNotSitProperly</h1>
         <footer>
             <p><a href="https://github.com/doesnotsitproperly/doesnotsitproperly.github.io">Take a look at the code</a></p>
             <p><a href="https://fonts.google.com/specimen/Cousine"><i>Cousine</i> font</a> by Steve Matteson; <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></p>
+            <p class="right-align" id="version"></p>
+            <script>
+                fetch("https://api.github.com/repos/doesnotsitproperly/doesnotsitproperly.github.io/commits?per_page=1")
+                    .then(result => result.json())
+                    .then(result => {
+                        document.getElementById("version").innerHTML = "version " + result[0].sha.substring(0, 7);
+                    });
+            </script>
         </footer>
     </body>
 </html>

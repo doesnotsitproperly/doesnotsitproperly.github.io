@@ -15,9 +15,7 @@ const resizeBody = () => {
     }
 }
 
-const onLoad = () => {
-    ifMobile();
-    resizeBody();
-}
+ifMobile();
+resizeBody();
 
 window.onresize = resizeBody;
