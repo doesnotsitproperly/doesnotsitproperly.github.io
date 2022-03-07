@@ -1,8 +1,10 @@
 const isMobile = navigator.userAgent.includes("Mobi");
 
-if (isMobile) {
-    document.getElementsByTagName("body")[0].style.fontSize = 32 + "px";
-    document.getElementsByTagName("footer")[0].style.fontSize = 16 + "px";
+const ifMobile = () => {
+    if (isMobile) {
+        document.getElementsByTagName("body")[0].style.fontSize = 32 + "px";
+        document.getElementsByTagName("footer")[0].style.fontSize = 16 + "px";
+    }
 }
 
 const resizeBody = () => {
@@ -13,5 +15,9 @@ const resizeBody = () => {
     }
 }
 
-window.onload = resizeBody;
+const onLoad = () => {
+    ifMobile();
+    resizeBody();
+}
+
 window.onresize = resizeBody;
