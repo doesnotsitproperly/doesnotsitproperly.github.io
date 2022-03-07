@@ -1,0 +1,19 @@
+html {
+    background-attachment: fixed;
+    background-color: coral;
+    background-image: linear-gradient(to bottom right, coral, slateblue);
+    background-repeat: no-repeat;
+}
+body {
+    background-color: thistle;
+    border: 3px solid black;
+    font-family: "Cousine", monospace;
+    font-size: 16px;
+    line-height: 2;
+    margin: 20px auto;
+    padding: 20px;
+}
+footer {
+    font-size: 80%;
+    line-height: 1;
+}
