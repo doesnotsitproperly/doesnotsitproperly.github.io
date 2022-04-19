@@ -2,27 +2,24 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link href="style.css" rel="stylesheet" id="stylesheet">
+        <link href="css/style.css" rel="stylesheet" id="stylesheet">
+        <link rel="stylesheet" id="platformStylesheet">
+
         <link href="https://fonts.googleapis.com/css?family=Cousine" rel="stylesheet">
+    
         <link href="icon.png" rel="shortcut icon">
-        <title>DoesNotSitProperly</title>
+        <title>doesnotsitproperly</title>
     </head>
     <body>
-        <script src="format.js"></script>
+        <script src="js/format.js" onload="platformFormat('css')"></script>
         <h1>doesnotsitproperly</h1>
-        <p>there is currently nothing to see here</p>
-        <p>check out <a href="https://doesnotsitproperly.github.io/faepedia/">Faepedia</a> if you want</p>
+        <p><a href="mailto:doesnotsitproperly@gmail.com">Click here to email me</a></p>
+        <p><a href="https://doesnotsitproperly.github.io/faepedia/">Check out Faepedia</a> if you want</p>
         <footer>
             <p><a href="https://github.com/doesnotsitproperly/doesnotsitproperly.github.io">Take a look at the code</a></p>
             <p><a href="https://fonts.google.com/specimen/Cousine"><i>Cousine</i> font</a> by Steve Matteson; <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a></p>
             <p class="right-align" id="version"></p>
-            <script>
-                fetch("https://api.github.com/repos/doesnotsitproperly/doesnotsitproperly.github.io/commits?per_page=1")
-                    .then(result => result.json())
-                    .then(result => {
-                        document.getElementById("version").innerHTML = "version " + result[0].sha.substring(0, 7);
-                    });
-            </script>
+            <script src="js/version.js"></script>
         </footer>
     </body>
 </html>
