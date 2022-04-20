@@ -2,7 +2,8 @@ const isMobile = navigator.userAgent.includes("Mobi");
 
 const resizeBody = () => {
     const body = document.getElementsByTagName("body")[0];
-    body.style.width = `${window.innerWidth * isMobile ? 0.9 : 0.6}px`;
+    const width = window.innerWidth * (isMobile ? 0.9 : 0.6);
+    body.style.width = `${width}px`;
 }
 
 const platformFormat = (pathToCss) => {
