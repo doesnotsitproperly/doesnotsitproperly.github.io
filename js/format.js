@@ -12,4 +12,4 @@ const platformFormat = (pathToCss) => {
 }
 
 resizeBody();
-window.onresize = resizeBody();
+window.onresize = resizeBody;
