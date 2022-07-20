@@ -1,5 +1,5 @@
 const getVersion = (repo) => {
-    fetch(`https://api.github.com/repos/doesnotsitproperly/${repo}/contributors`)
+    fetch(`https://api.github.com/repos/${repo}/contributors`)
         .then((result) => result.json())
         .then((result) => {
             let numberOfCommits = 0;
