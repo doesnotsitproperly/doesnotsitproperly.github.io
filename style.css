@@ -1,0 +1,33 @@
+:root {
+    background-color: #EDC9AF;
+}
+
+body {
+    border: 3px dashed black;
+    font-family: "Cousine", monospace;
+    line-height: 2;
+    margin: 20px auto;
+    padding: 20px;
+}
+footer {
+    line-height: 1;
+}
+
+@media (orientation: landscape) {
+    body {
+        font-size: 1.2em;
+        width: 60vw;
+    }
+    footer {
+        font-size: 80%;
+    }
+}
+@media (orientation: portrait) {
+    body {
+        font-size: 2.4em;
+        width: 90vw;
+    }
+    footer {
+        font-size: 50%;
+    }
+}
