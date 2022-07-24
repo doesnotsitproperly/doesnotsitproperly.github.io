@@ -6,6 +6,6 @@ const getVersion = (repo) => {
             for (const contributor of result) {
                 numberOfCommits += contributor.contributions;
             }
-            document.getElementById("version").innerHTML = `version ${numberOfCommits}`;
+            document.getElementById("version").textContent = `version ${numberOfCommits}`;
         });
 }
